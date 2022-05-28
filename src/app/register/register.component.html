@@ -1,0 +1,40 @@
+<div style="margin-left: 35%; width: 350px;margin-top: 10%;" >
+    <form (submit)="submit()">
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" [(ngModel)]="userName" name="email">
+          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" [(ngModel)]="password" name="password">
+        </div>
+        <div style="margin-left: 30%;">
+           <div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" value="admin" (change)="onItemChange($event.target)" checked>
+                <label class="form-check-label" for="flexRadioDefault1">
+                  Admin
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" value="speaker"  (change)="onItemChange($event.target)">
+                <label class="form-check-label" for="flexRadioDefault2">
+                  Speaker
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3" value="student" (change)="onItemChange($event.target)">
+                <label class="form-check-label" for="flexRadioDefault3">
+                  Student
+                </label>
+            </div>
+        </div>
+           </div>
+          <span style="margin-left: 40px;"> Have an Account?</span>
+          <a style="margin-left: 30px; text-decoration: underline;" [routerLink]="['signup']">Sign Up</a>
+        <br>
+           <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+      <a routerLink="/students">click</a>
+</div>

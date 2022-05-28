@@ -1,0 +1,29 @@
+<table class="table">
+    <tbody>
+      <tr>
+        <th>Id</th>
+        <td>{{spk._id}}</td>
+      </tr>
+      <tr>
+        <th>Email</th>
+        <td>{{spk.email}}</td>
+      </tr>
+      <tr>
+        <th>UserName</th>
+        <td>{{spk.userName}}</td>
+      </tr>
+      <tr>
+        <th>City</th>
+        <td>{{spk.address.city}}</td>
+      </tr>
+      <tr>
+        <th>Street</th>
+        <td>{{spk.address.street}}</td>
+      </tr>
+      <tr>
+        <th>building Number</th>
+        <td>{{spk.address.buildingNumber}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <button class="btn btn-primary" (click)="back()">Back</button>

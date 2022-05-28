@@ -1,0 +1,28 @@
+<table class="table table-striped table-bordered table-hover table-inverse table-responsive">
+    <thead class="thead-inverse|thead-default">
+        <tr>
+            <th>Id</th>
+            <th>Email</th>
+            <th>User Name</th>
+            <th>City</th>
+            <th>Street</th>
+            <th>Building Number</th>
+            <th>Operation</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of spks">
+                <td>{{item._id}}</td>
+                <td>{{item.email}}</td>
+                <td>{{item.userName}}</td>
+                <td>{{item.address.city}}</td>
+                <td>{{item.address.street}}</td>
+                <td>{{item.address.buildingNumber}}</td>
+                <td>
+                    <a class="btn btn-primary" style="margin: 5px;" [routerLink]="['details/'+item._id]"> Details</a> 
+                    <a class="btn btn-success" style="margin: 5px;"> Edit</a> 
+                    <a class="btn btn-danger" style="margin: 5px;" (click)="delete(item._id)"> Delete</a> 
+                </td>
+            </tr>
+        </tbody>
+</table>
